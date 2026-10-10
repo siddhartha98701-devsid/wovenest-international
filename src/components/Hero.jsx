@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Globe2, Compass, Layers, CheckCircle2, ArrowRight, ShieldCheck, Sparkles } from 'lucide-react';
+import { Globe2, Compass, ArrowRight } from 'lucide-react';
 import AnimatedText from './AnimatedText';
 import { scrollTo } from '../hooks/useLenis';
 
@@ -33,18 +33,7 @@ export default function Hero({ onOpenInquiry }) {
         {/* ── Main Hero Editorial Content ── */}
         <div className="w-full max-w-4xl mx-auto text-center flex flex-col items-center">
           
-          {/* Eyebrow badge (Crisp Pill with Warm Border) */}
-          <motion.div
-            initial={{ opacity: 0, y: 12 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white/95 border border-stone-200/90 mb-8 shadow-xs backdrop-blur-md"
-          >
-            <span className="w-2 h-2 rounded-full bg-amber-700 animate-pulse" />
-            <span className="text-[10px] tracking-[0.24em] uppercase text-stone-800 font-sans font-bold">
-              GOVERNMENT-RECOGNIZED EXPORT FIRM &bull; HERITAGE WEAVING
-            </span>
-          </motion.div>
+
 
           {/* Brand Wordmark (Cinzel Display with Generous Letterspacing) */}
           <motion.div
@@ -191,24 +180,12 @@ export default function Hero({ onOpenInquiry }) {
 
           </div>
 
-          {/* Bottom assurance strip */}
-          <div className="mt-8 pt-6 border-t border-stone-200/80 flex flex-wrap items-center justify-between gap-4 text-xs font-sans text-stone-700">
-            <div className="flex items-center gap-2">
-              <CheckCircle2 size={16} className="text-amber-800 flex-shrink-0" />
-              <span className="font-medium">GOTS & OEKO-TEX Standard 100 Certified</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <Layers size={16} className="text-amber-800 flex-shrink-0" />
-              <span className="font-medium">Double-Mercerized Pre-Shrunk Finish</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <ShieldCheck size={16} className="text-amber-800 flex-shrink-0" />
-              <span className="font-medium">Universal CIF / FOB Export Documentation</span>
-            </div>
+          {/* Bottom navigation link */}
+          <div className="mt-8 pt-6 border-t border-stone-200/80 flex items-center justify-end">
             <button
               type="button"
               onClick={() => scrollTo('#brand-bridge')}
-              className="inline-flex items-center gap-1.5 text-stone-900 hover:text-amber-800 font-bold text-xs uppercase tracking-wider transition-colors ml-auto cursor-pointer"
+              className="inline-flex items-center gap-1.5 text-stone-900 hover:text-amber-800 font-bold text-xs uppercase tracking-wider transition-colors cursor-pointer"
             >
               <span>Explore The Brand Bridge</span>
               <ArrowRight size={13} />

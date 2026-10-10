@@ -218,8 +218,6 @@ export default function Footer({ onOpenInquiry }) {
         </div>
 
         <div className="flex items-center gap-6">
-          <span className="hover:text-stone-900 cursor-pointer">Export Terms (CIF/FOB)</span>
-          <span className="hover:text-stone-900 cursor-pointer">OEKO-TEX & GOTS Compliance</span>
           <button
             type="button"
             onClick={() => scrollTo(0)}

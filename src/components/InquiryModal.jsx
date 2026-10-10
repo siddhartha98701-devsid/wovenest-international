@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, Globe, ShieldCheck, ArrowRight, Check, Loader2, AlertCircle } from 'lucide-react';
+import { X, ArrowRight, Check, Loader2, AlertCircle } from 'lucide-react';
 import { submitInquiry } from '../lib/firebase';
 
 export default function InquiryModal({ isOpen, onClose, defaultSubject = 'Bespoke Textile & Apparel Inquiry' }) {
@@ -273,17 +273,6 @@ New Delhi Trade Headquarters, India`
                 />
               </div>
 
-              {/* Trade Assurance badges */}
-              <div className="pt-2 flex flex-wrap items-center gap-4 text-[10px] text-stone-600 font-sans border-t border-stone-200">
-                <div className="flex items-center gap-1.5 text-amber-900 font-medium">
-                  <Globe size={12} strokeWidth={1.5} />
-                  <span>CIF / FOB Worldwide Transit</span>
-                </div>
-                <div className="flex items-center gap-1.5 text-amber-900 font-medium">
-                  <ShieldCheck size={12} strokeWidth={1.5} />
-                  <span>OEKO-TEX & GOTS Certified</span>
-                </div>
-              </div>
 
               {/* Submit CTA */}
               <button
